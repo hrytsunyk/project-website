@@ -7,10 +7,14 @@ import {Logo} from "../components/Logo/Logo";
 const MainLayout = () => {
     return (
         <div className={css.mainLayout}>
+
             <Header/>
+
             <div className={css.LogoOutlet}>
+
                 <Logo/>
                 <div className={css.fatherOutlet}><Outlet/></div>
+
             </div>
         </div>
     );

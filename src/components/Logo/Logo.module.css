@@ -6,11 +6,13 @@
     align-items: center;
     padding-left: 20px;
     box-sizing: border-box;
+    position: sticky;
+    top:10px
 }
 
 h2 {
     font-size: 50px;
     color: red;
     margin: 0;
-    transform: perspective(500px);
+
 }

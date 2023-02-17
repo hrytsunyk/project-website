@@ -1,6 +1,9 @@
 .HeaderFather{
     /*display: flex;*/
-    z-index: +1;
+    /*z-index: +1;*/
+    position: sticky;
+    left: 10px;
+    top: 10px;
 
 }
 .Header{
@@ -12,7 +15,6 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    position: relative;
 }
 
 

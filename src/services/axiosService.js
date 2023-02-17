@@ -1,7 +1,7 @@
 import axios from "axios";
 import {baseURL} from "../configs";
 
-const token = 'eyJhbGciOiJIUzI1NiJ9.' +
+const access_token = 'eyJhbGciOiJIUzI1NiJ9.' +
     'eyJhdWQiOiJiYjdhZDY4NjMzNTVmMjQ5Nj' +
     'c5MTE2MTFkZTEwOWJmMSIsInN1YiI6IjYzZ' +
     'WVhZjQ0MWM2YWE3MDA5MWUwYTliYSIsInNjb3' +
@@ -11,10 +11,12 @@ const token = 'eyJhbGciOiJIUzI1NiJ9.' +
 const axiosService = axios.create({baseURL});
 
 
-axiosService.interceptors.request.use((config)=> {
-config.headers.Authorization = `Bearer ${token}`
+axiosService.interceptors.request.use((config) => {
+    config.headers.Authorization = `Bearer ${access_token}`
     return config
 })
+
+
 export {
     axiosService
 }

@@ -1,7 +1,7 @@
 import css from './Header.module.css';
 
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faHome, faUser, faSearch, faSignOut} from "@fortawesome/free-solid-svg-icons";
+import {faHome, faUser, faSearch, faSignOut, faFilm} from "@fortawesome/free-solid-svg-icons";
 import {NavLink} from "react-router-dom";
 import {useState} from "react";
 import DayNightToggle from 'react-day-and-night-toggle'
@@ -22,7 +22,8 @@ const Header = () => {
                 />
                 <div className={css.Icons}>
                     <div className={css.top_icons}>
-                        <NavLink to={'/movies'}><FontAwesomeIcon icon={faHome}/></NavLink>
+                        <NavLink to={'/home'}><FontAwesomeIcon icon={faHome}/></NavLink>
+                        <NavLink to={'/movies'}><FontAwesomeIcon icon={faFilm}/></NavLink>
                         <NavLink to={'/user'}><FontAwesomeIcon icon={faUser}/></NavLink>
                         <NavLink to={'/search'}><FontAwesomeIcon icon={faSearch}/></NavLink>
                     </div>

@@ -1,21 +1,22 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
-import {axiosService} from "../../services/axiosService";
 import {movieService} from "../../services/movieService";
 
 
 const initialState = {
-    movies:[],
-    loading:null,
-    error: null,
-
+    movies: [],
+    next: null,
+    prev: null,
+    loading: null,
+    error: null
 };
 
 const getMovies = createAsyncThunk(
     'movieSlice/getMovies',
-    async (_,thunkAPI)=>{
+    async ({page}, thunkAPI) => {
         try {
-           const {data} = await movieService.getMovies()
+            const {data} = await movieService.getMovies({page});
             return data
+
         } catch (e) {
             return thunkAPI.rejectWithValue(e.response.data)
         }
@@ -23,18 +24,20 @@ const getMovies = createAsyncThunk(
 );
 
 const movieSlice = createSlice({
-    name:'movieSlice',
+    name: 'movieSlice',
     initialState,
     reducers: {},
-    extraReducers:(builder)=>{
-
+    extraReducers: (builder) => {
+        builder.addCase(getMovies.fulfilled, (state, action) => {
+            state.movies = action.payload
+        })
     }
 });
 
-const {reducer:movieReducer} = movieSlice;
+const {reducer: movieReducer} = movieSlice;
 
 
-const movieActions  ={
+const movieActions = {
     getMovies
 };
 

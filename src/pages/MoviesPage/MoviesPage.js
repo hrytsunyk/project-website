@@ -1,9 +1,10 @@
-import css from './MoviesPage.module.css'
+import {MoviesList} from "../../components";
+import css from "./MoviesPage.module.css";
 
 const MoviesPage = () => {
     return (
         <div className={css.fatherMovies}>
-            <h1>HELLO WORLD</h1>
+            <MoviesList/>
         </div>
     );
 };
