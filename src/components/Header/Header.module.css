@@ -1,0 +1,57 @@
+.HeaderFather{
+    /*display: flex;*/
+    z-index: +1;
+
+}
+.Header{
+    width: 100px;
+    height: 100vh;
+    background: #202427;
+    color: #636468;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+
+
+.Icons {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0 25px 0;
+}
+
+.top_icons {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+a {
+    color: #66686c;
+    font-size: 25px;
+    margin: 25px;
+    text-decoration: none;
+}
+
+a[class='active']{
+    width: 60px;
+    height: 60px;
+    color: aliceblue;
+    border-radius: 10px;
+    background: #292d32;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dayNightSwitcher{
+    margin-top: 20px;
+}
