@@ -4,8 +4,7 @@ import {movieService} from "../../services/movieService";
 
 const initialState = {
     movies: [],
-    next: null,
-    prev: null,
+    page: null,
     loading: null,
     error: null
 };
@@ -29,7 +28,10 @@ const movieSlice = createSlice({
     reducers: {},
     extraReducers: (builder) => {
         builder.addCase(getMovies.fulfilled, (state, action) => {
-            state.movies = action.payload
+           const {page, results} = action.payload
+            state.page=page;
+            state.movies = results;
+
         })
     }
 });

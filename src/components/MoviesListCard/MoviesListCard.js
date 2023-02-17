@@ -1,7 +1,7 @@
 import css from './MoviesListCard.module.css'
 
 const MoviesListCard = ({movie}) => {
-    const {results:{title}} = movie;
+    const {title} = movie;
 
     return (
         <div className={css.Card}>
