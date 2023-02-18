@@ -1,0 +1,31 @@
+.fatherMoviesList{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.button {
+    width: 40px;
+    font-size: 20px;
+    height: 40px;
+    background: #2a2e33;
+    margin:10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.button:hover{
+    cursor: pointer;
+    background: #a10000;
+    box-shadow: red 1px 1px 5px 1px;
+
+}
+
+.button:active{
+    background: #2a2e33;
+    font-size: 15px;
+    transition: 500ms;
+}

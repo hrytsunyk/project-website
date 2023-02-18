@@ -4,7 +4,7 @@ import {urls} from "../configs";
 
 
 const movieService = {
-    getMovies: (page=1)=>axiosService.get(urls.movies.getMovies, {params:page})
+    getMovies: (page=1)=>axiosService.get(urls.movies.getMovies, {params:page}),
 }
 
 

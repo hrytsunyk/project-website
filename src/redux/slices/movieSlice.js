@@ -5,6 +5,7 @@ import {movieService} from "../../services/movieService";
 const initialState = {
     movies: [],
     page: null,
+    totalPages: null,
     loading: null,
     error: null
 };
@@ -27,12 +28,19 @@ const movieSlice = createSlice({
     initialState,
     reducers: {},
     extraReducers: (builder) => {
-        builder.addCase(getMovies.fulfilled, (state, action) => {
-           const {page, results} = action.payload
-            state.page=page;
-            state.movies = results;
+        builder
+            .addCase(getMovies.fulfilled, (state, action) => {
+                const {page, results, total_pages} = action.payload
+                state.loading = false;
+                state.page = page;
+                state.totalPages = total_pages;
+                state.movies = results;
 
-        })
+            })
+            .addCase(getMovies.pending, (state, action) => {
+                state.loading = true
+            })
+
     }
 });
 

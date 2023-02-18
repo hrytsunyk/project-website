@@ -1,7 +1,6 @@
 .mainLayout {
     width: 100%;
     display: flex;
-    background: #1e2224;
     color: aliceblue;
     /*flex-wrap: wrap;*/
 }

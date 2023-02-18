@@ -5,7 +5,7 @@
     align-items: center;
     flex-wrap: wrap;
     margin-top: 100px;
-    /*flex-direction: column;*/
+    flex-direction: row;
 }
 
 h3{
