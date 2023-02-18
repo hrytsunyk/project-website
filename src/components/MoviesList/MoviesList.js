@@ -6,6 +6,9 @@ import {useSearchParams} from "react-router-dom";
 import {MoviesListCard} from "../MoviesListCard/MoviesListCard";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faArrowLeft, faArrowRight, faArrows} from "@fortawesome/free-solid-svg-icons";
+import {movieService} from "../../services/movieService";
+import {GenreBadge} from "../GenreBadge/GenreBadge";
+import {Logo} from "../Logo/Logo";
 
 
 const MoviesList = () => {
@@ -23,17 +26,19 @@ const MoviesList = () => {
     }, [dispatch, query])
 
 
+
     return (
         <div className={css.fatherMoviesList}>
-            <div>
+            <Logo/>
+            <GenreBadge/>
+            <div className={css.moviesList}>
                 {movies.map((movie, index) => <MoviesListCard key={index} movie={movie}/>)}
             </div>
-
             <div className={css.buttons}>
                 <div className={css.button}>
                     <FontAwesomeIcon
                         icon={faArrowLeft}
-                        disabled={page <= 1 ? page : null}
+                        disabled={page <= 1}
                         onClick={() => setQuery(query => ({
                             page: +query.get('page') - 1
                         }))}
@@ -43,7 +48,7 @@ const MoviesList = () => {
                 <div className={css.button}>
                     <FontAwesomeIcon
                     icon={faArrowRight}
-                    disabled={page >= totalPages}
+                    disabled={page <= 0}
                     onClick={() => setQuery(query => ({
                         page: +query.get('page') + 1
                     }))}

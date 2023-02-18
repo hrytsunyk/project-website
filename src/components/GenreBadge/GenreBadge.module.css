@@ -1,0 +1,9 @@
+.GenreBadgeFather {
+    /*display: flex;*/
+}
+
+.GenreBadge{
+    width: 80px;
+    height: 20px;
+    background: #66686c;
+}

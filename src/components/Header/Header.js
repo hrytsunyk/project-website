@@ -9,17 +9,12 @@ import DayNightToggle from 'react-day-and-night-toggle'
 
 const Header = () => {
 
-   const [isDarkMode, setIsDarkMode] = useState(false);
 
 
     return (
-        <div className={css.HeaderFather}>
+        <div>
             <div className={css.Header}>
 
-                <DayNightToggle className={css.dayNightSwitcher} size={20}
-                    onChange={() => setIsDarkMode(!isDarkMode)}
-                    checked={isDarkMode}
-                />
                 <div className={css.Icons}>
                     <div className={css.top_icons}>
                         <NavLink to={'/home'}><FontAwesomeIcon icon={faHome}/></NavLink>

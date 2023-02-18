@@ -1,12 +1,10 @@
 import {Navigate, Route, Routes} from "react-router-dom";
 import {MainLayout} from "./layouts";
-import {HomePage, MoviePage, MoviesPage} from "./pages";
-import {UserPage} from "./pages/UserPage/UserPage";
-import {SearchPage} from "./pages/SearchPage/SearchPage";
+import {HomePage, MoviePage, MoviesPage, SearchPage, UserPage} from "./pages";
 
 const App = () => {
     return (
-        <div>
+
             <Routes>
                 <Route path={'/'} element={<MainLayout/>}>
                     <Route index element={<Navigate to={'movies'}/>}/>
@@ -17,7 +15,7 @@ const App = () => {
                     <Route path={'search'} element={<SearchPage/>}/>
                 </Route>
             </Routes>
-        </div>
+
     );
 };
 

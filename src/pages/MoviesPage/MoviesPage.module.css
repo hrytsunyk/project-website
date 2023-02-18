@@ -1,13 +1,9 @@
 .fatherMovies {
-    width: 100vh;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 100px;
-    flex-direction: row;
+   /*display: flex;*/
+   /* justify-content: center;*/
+   /* align-items: center;*/
 }
 
 h3{
-    color: aliceblue;
+    /*color: aliceblue;*/
 }

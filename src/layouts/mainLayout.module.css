@@ -1,17 +1,17 @@
 .mainLayout {
-    width: 100%;
-    display: flex;
+    /*width: 100vh;*/
+    /*display: flex;*/
     color: aliceblue;
     /*flex-wrap: wrap;*/
 }
 
 .LogoOutlet {
-  width: 100%;
+  /*width: 100%;*/
 }
 
 .fatherOutlet {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /*width: 100vh;*/
+    /*display: flex;*/
+    /*justify-content: space-evenly;*/
+    /*align-items: center;*/
 }

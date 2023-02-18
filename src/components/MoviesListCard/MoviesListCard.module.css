@@ -1,6 +1,49 @@
-.Card {
-    width: 200px;
-    height: 300px;
-    color: aliceblue;
-    margin: 30px;
+.cardFather {
+    width: 250px;
+    position: relative;
+    top:-80px;
+    transition: 600ms;
+    margin: 20px;
+}
+
+
+
+
+img {
+    width: 250px;
+    height: 350px;
+}
+img:hover{
+    transition: 600ms;
+    box-shadow: #7a7a7a 0px 0 10000px 0px ;
+    z-index: -1;
+}
+
+.cardFather:hover{
+    margin-top: -10px;
+}
+
+
+
+.movieImageTitle {
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+
+    /*margin: 20px;*/
+}
+
+
+.title{
+    height: 60px;
+    color: white;
+    background: rgb(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+    top: 81px;
+
 }

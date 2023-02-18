@@ -8,14 +8,10 @@ const MainLayout = () => {
     return (
         <div className={css.mainLayout}>
 
-            <Header/>
+                <Header/>
+                {/*<Logo/>*/}
+                <Outlet/>
 
-            <div className={css.LogoOutlet}>
-
-                <Logo/>
-                <div className={css.fatherOutlet}><Outlet/></div>
-
-            </div>
         </div>
     );
 };

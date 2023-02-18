@@ -1,7 +1,8 @@
+import css from './GenreBadge.module.css';
 const GenreBadge = () => {
     return (
-        <div>
-            gd
+        <div className={css.GenreBadgeFather}>
+            <div className={css.GenreBadge}> fsdgagaedf</div>
         </div>
     );
 };
